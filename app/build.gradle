@@ -11,6 +11,18 @@ def version_build = 2
 def packageName = "kiosk-8way"
 def vName
 
+plugins {
+    id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "kylecheng3146_KIOSK"
+        property "sonar.organization", "kylecheng3146"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
 android {
     flavorDimensions "default"
 
