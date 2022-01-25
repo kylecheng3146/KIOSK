@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="idledTimeMsg">你已經閒置四十秒囉!</string>
+</resources>

@@ -1,0 +1,384 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+// Add the Firebase Crashlytics plugin.
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-kapt'
+
+def version_code = 132
+def version_major = 1
+def version_minor = 6
+def version_build = 2
+def packageName = "kiosk-8way"
+def vName
+
+android {
+    flavorDimensions "default"
+
+    signingConfigs {
+        release {
+            keyAlias 'kiosk_key'
+            keyPassword '24436074'
+            storeFile file('../secret/kiosk.jks')
+            storePassword 'kioskkey'
+        }
+        debug {
+
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileSdkVersion 30
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "tw.lafreash.app.kiosk"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode version_code
+        versionName version_major.intValue()+ "." + version_minor.intValue() + "." +  version_build.intValue() +"(" + versionCode + ")"
+        vName = versionName
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            output.outputFileName = new File("../../", "kiosk-" + vName + file.name.substring(file.name.indexOf("-")))
+        }
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        legendary {
+            versionNameSuffix "-legendary"
+            packageName = "kiosk-legendary"
+        }
+
+        standard {
+            versionNameSuffix "-standard"
+            packageName = "kiosk-standard"
+        }
+
+        shanghe {
+            versionNameSuffix "-shanghe"
+            packageName = "kiosk-shanghe"
+        }
+
+        liangshehan {
+            versionNameSuffix "-liangshehan"
+            packageName = "kiosk-liangshehan"
+        }
+
+        brogent {
+            versionNameSuffix "-brogent"
+            packageName = "kiosk-brogent"
+        }
+
+        TFG {
+            versionNameSuffix "-TFG"
+            packageName = "kiosk-TFG"
+        }
+
+//        kinyo {
+//            versionNameSuffix "-kinyo"
+//            packageName = "kiosk-kinyo"
+//        }
+
+        FormosaChang {
+            versionNameSuffix "-FormosaChang"
+            packageName = "kiosk-formosa-chang"
+        }
+
+        bafang {
+            versionNameSuffix "-bafang"
+            packageName = "kiosk-bafang-yunji"
+        }
+
+        mini {
+            versionNameSuffix "-mini"
+            packageName = "kiosk-mini"
+        }
+
+        mwd {
+            versionNameSuffix "-mwd"
+            packageName = "kiosk-mwd"
+        }
+
+        fafathai {
+            versionNameSuffix "-fafathai"
+            packageName = "kiosk-88thai"
+        }
+
+        galileo {
+            versionNameSuffix "-galileo"
+            packageName = "kiosk-galileo"
+        }
+
+        hongya {
+            versionNameSuffix "-hongya"
+            packageName = "kiosk-hongya"
+        }
+
+        cashmodule {
+            versionNameSuffix "-cashmodule"
+            packageName = "kiosk-cashmodule"
+        }
+
+        jourdeness {
+            versionNameSuffix "-jourdeness"
+            packageName = "kiosk-jourdeness"
+        }
+
+        liangpin{
+            versionNameSuffix "-linagpin"
+            packageName = "kiosk-linagpin"
+        }
+
+        lanxin{
+            versionNameSuffix "-lanxin"
+            packageName = "kiosk-lanxin"
+        }
+    }
+
+    sourceSets {
+        legendary {
+            res.srcDirs = ['src/main/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        standard {
+            res.srcDirs = ['src/main/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        brogent {
+            res.srcDirs = ['src/brogent/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        shanghe {
+            res.srcDirs = ['src/shanghe/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        liangshehan {
+            res.srcDirs = ['src/liangshehan/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        TFG {
+            res.srcDirs = ['src/TFG/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+//        kinyo {
+//            res.srcDirs = ['src/kinyo/res']
+//            java.srcDirs = ['src/kinyo/java']
+//        }
+
+        FormosaChang {
+            res.srcDirs = ['src/FormosaChang/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        bafang {
+            res.srcDirs = ['src/bafang/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        mini {
+            res.srcDirs = ['src/mini/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        mwd {
+            res.srcDirs = ['src/mwd/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        fafathai {
+            res.srcDirs = ['src/88thai/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        galileo {
+            res.srcDirs = ['src/galileo/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        hongya {
+            res.srcDirs = ['src/hongya/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        cashmodule {
+            res.srcDirs = ['src/cashmodule/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        jourdeness {
+            res.srcDirs = ['src/jourdeness/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        liangpin{
+            res.srcDirs = ['src/linagpin/res']
+            java.srcDirs = ['src/old/java']
+        }
+
+        lanxin{
+            res.srcDirs = ['src/lanxin/res']
+            java.srcDirs = ['src/old/java']
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'mozilla/public-suffix-list.txt'
+        exclude 'org/apache/http/client/version.properties'
+
+    }
+
+    task ktlint(type: JavaExec, group: "verification") {
+        description = "Check Kotlin code style."
+        classpath = configurations.ktlint
+        main = "com.pinterest.ktlint.Main"
+        args "src/**/*.kt",
+                // to generate report in checkstyle format
+                // prepend following args:
+                "--reporter=plain", "--reporter=html,output=${buildDir}/ktlint.html"
+        // see https://github.com/pinterest/ktlint#usage for more
+    }
+
+    check.dependsOn ktlint
+
+    //run 此段會直接幫你修正.
+    task ktlintFormat(type: JavaExec, group: "formatting") {
+        description = "Fix Kotlin code style deviations."
+        main = "com.pinterest.ktlint.Main"
+        classpath = configurations.ktlint
+        args "-F", "src/**/*.kt"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.firebase:firebase-core:19.0.2'
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.3'
+    // Declare the dependency for the Realtime Database library
+    // When NOT using the BoM, you must specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    // NDK Kit
+//    implementation 'com.google.firebase:firebase-crashlytics-ndk:17.3.0'
+    // Declare the dependencies for the Remote Config and Analytics libraries
+    // When NOT using the BoM, you must specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-config-ktx:21.0.0'
+    implementation 'com.google.firebase:firebase-analytics-ktx:19.0.0'
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
+    testImplementation "org.powermock:powermock-module-junit4:2.0.2"
+    testImplementation "org.powermock:powermock-api-mockito2:2.0.2"
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.8.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+    androidTestImplementation "io.mockk:mockk-android:1.10.6"
+    testImplementation "io.mockk:mockk:1.10.6"
+
+
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.7'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'org.dom4j:dom4j:2.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+    implementation 'com.google.zxing:javase:3.2.1'
+
+    //出單機
+    implementation files('libs/printerlibs.jar')
+    implementation files('libs/winpos-lib.jar')
+
+    //悠遊卡套件
+    implementation project(':ICERAPI')
+
+    //SerialPort
+    implementation 'com.github.licheedev.Android-SerialPort-API:serialport:1.0.1'
+
+    //android logger plugin
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //zxing barcode scanner
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0@aar'
+    implementation 'com.google.zxing:core:3.3.3'
+
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3'
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //glide sdk
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.11.0"
+
+    //NuwaSDK
+    implementation project(':NuwaSDK')
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+    //ktlint
+    ktlint "com.pinterest:ktlint:0.36.0"
+
+    //kotlinx-serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
+
+    //藍新機
+    implementation project(':core-zx')
+    implementation files('libs/saiolib.jar')
+}
+
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

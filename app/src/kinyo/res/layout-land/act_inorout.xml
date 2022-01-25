@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.DiningOptionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="370dp"
+        android:layout_height="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:onClick="avoidBtn" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="370dp"
+            android:layout_height="68dp"
+            app:srcCompat="@drawable/logo_title" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ad"
+        android:layout_width="800dp"
+        android:layout_height="411dp"
+        android:layout_below="@+id/rl_top"
+        android:background="#EEF"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivAd"-->
+<!--            android:layout_width="1080dp"-->
+<!--            android:layout_height="380dp"-->
+<!--            android:src="@drawable/page_ad" />-->
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_login"
+        android:layout_below="@+id/rl_ad"
+        android:background="@color/kinyo_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rl_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/Btn_In"
+            android:layout_width="200dp"
+
+            android:layout_height="200dp"
+            android:layout_below="@+id/tv_select"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/inside_pressed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_in"
+            android:layout_width="256dp"
+            android:layout_height="68dp"
+            android:layout_below="@+id/Btn_In"
+            android:layout_alignStart="@+id/Btn_In"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/brush246_select"
+            android:text="@string/dineIn"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_Out"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tv_select"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="97dp"
+            android:background="@drawable/takeout_pressed"
+            android:textSize="128sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_out"
+            android:layout_width="256dp"
+            android:layout_height="68dp"
+            android:layout_below="@+id/Btn_In"
+            android:layout_alignStart="@+id/Btn_Out"
+            android:background="@drawable/brush246_select"
+            android:text="@string/takeAway"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="282dp"
+            android:layout_height="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="@string/selectSaleMethod"
+            android:textColor="@color/kinyo_takeout_page_title"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:background="#000"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/loginPlease"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        android:textSize="36sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="1080dp"
+            android:layout_height="350dp"
+            android:background="@drawable/inorout_bottom"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:visibility="gone"
+            android:layout_width="426dp"
+            android:layout_height="145dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/inorout_member_select" />
+
+        <Button
+            android:id="@+id/btn_welcome"
+            android:layout_width="545dp"
+            android:layout_height="173dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_name_select"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            android:visibility="gone" />
+
+        <!--    flavor 需要    -->
+        <TextView
+            android:id="@+id/tv_welcome_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:lineSpacingExtra="12sp"
+            android:textColor="@color/black"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="您好，歡迎點餐" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivAd"
+        android:layout_width="370dp"
+        android:layout_height="532dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_body"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top"
+        app:srcCompat="@drawable/banner2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_brands"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_login"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd"
+        app:layout_constraintVertical_bias="1.0"
+        app:spanCount="4"
+        tools:listitem="@layout/item_payments"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

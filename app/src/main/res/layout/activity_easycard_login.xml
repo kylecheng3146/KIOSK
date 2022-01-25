@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.DiningOptionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:onClick="avoidBtn" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlBigButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_login"
+            android:layout_below="@+id/rl_ad"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_big_sale_method"
+                android:onClick="onClick"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/btnBigBrush"
+                android:layout_width="256dp"
+                android:layout_height="68dp"
+                android:layout_below="@+id/btnBig"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/brush246_select"
+                android:onClick="onClick"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_login"
+            android:layout_below="@+id/rl_ad"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/tv_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="128dp"
+                android:gravity="center"
+                android:text="@string/selectLoginMethod"
+                android:textColor="#000"
+                android:textSize="64sp" />
+
+            <Button
+                android:id="@+id/btn_visitor"
+                android:layout_width="256dp"
+                android:layout_height="252dp"
+                android:layout_below="@+id/tv_select"
+                android:layout_marginStart="192dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/btn_guest" />
+
+            <Button
+                android:id="@+id/btn_easycard_login"
+                android:layout_width="256dp"
+                android:layout_height="252dp"
+                android:layout_below="@+id/tv_select"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="192dp"
+                android:background="@drawable/btn_easycard_login"
+                android:gravity="bottom|center"
+                android:paddingBottom="14dp"
+                android:text="學生證"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="350dp"
+                android:background="@drawable/inorout_bottom"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="426dp"
+                android:layout_height="145dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/inorout_member_select"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_welcome"
+                android:layout_width="545dp"
+                android:layout_height="173dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_name_select"
+                android:text="@string/welcome"
+                android:textColor="@color/white"
+                android:textSize="64sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

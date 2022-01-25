@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="272dp"
+            android:layout_height="236dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/warning" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="請選擇欲盤點的錢箱"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_checkout_page"
+            android:layout_width="520dp"
+            android:layout_height="417dp"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+            <CheckBox
+                android:id="@+id/cb_hundred"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="213dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cb_fifty"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="213dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_hundred" />
+
+            <CheckBox
+                android:id="@+id/cb_ten"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="213dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_fifty" />
+
+            <CheckBox
+                android:id="@+id/cb_five"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="213dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_ten" />
+
+            <CheckBox
+                android:id="@+id/cb_one"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="213dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_five" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="100元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_hundred"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hundred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cb_hundred" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="50元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_fifty"
+                app:layout_constraintEnd_toStartOf="@+id/cb_fifty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cb_fifty" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="10元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_ten"
+                app:layout_constraintEnd_toStartOf="@+id/cb_ten"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cb_ten" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="5元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_five"
+                app:layout_constraintEnd_toStartOf="@+id/cb_five"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cb_five" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="1元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_one"
+                app:layout_constraintEnd_toStartOf="@+id/cb_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cb_one" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_type_password_page"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0.0">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="316dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="151dp"
+                android:background="@drawable/radius_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/selector_btn_orange_circle"
+            android:text="@string/return_previous_page"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_confirm" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/selector_btn_alert_confirm"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_checkout_result_page"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_total_hundred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="100元 * 0 張"
+                android:textSize="42sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_fifty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="50元 * 0 個"
+                android:textSize="42sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_hundred" />
+
+            <TextView
+                android:id="@+id/tv_total_ten"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="10元 * 0 個"
+                android:textSize="42sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_fifty" />
+
+            <TextView
+                android:id="@+id/tv_total_five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="5元 * 0 個"
+                android:textSize="42sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_ten" />
+
+            <TextView
+                android:id="@+id/tv_total_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="1元 * 0 個"
+                android:textSize="42sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_five" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

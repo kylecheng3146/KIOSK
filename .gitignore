@@ -1,0 +1,23 @@
+.gradle
+/local.properties
+.DS_Store
+*/build
+/captures
+
+*.iml
+/.idea
+*.log
+
+# Android NDK
+*.o
+*.o.d
+*_g
+*.a
+*.so
+*.pinfo
+*.gcno
+*.bar
+gdbserver
+gdb.setup
+.run/*
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlQnA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/vMiddle">
+
+                    <TextView
+                        android:id="@+id/tvQuestion"
+                        style="@style/WindowContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="100dp"
+                        android:text="@string/startDongle"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+
+                    <Button
+                        android:id="@+id/btnYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvQuestion"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/selector_btn_yes" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/dustGray" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vMiddle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="100dp">
+
+                    <ImageView
+                        android:id="@+id/iv_easyCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_easy_card" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/WindowTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_toEndOf="@+id/iv_easyCard"
+                        android:text="@string/scanEasyCard"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        style="@style/WindowContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTitle"
+                        android:layout_alignStart="@+id/tvTitle"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/scanEasyCardMsg"
+                        android:textColor="#000"
+                        android:letterSpacing="0.1" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/right_menu" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55dp"
+            android:background="@drawable/selector_btn_back" />
+    </RelativeLayout>
+
+</LinearLayout>

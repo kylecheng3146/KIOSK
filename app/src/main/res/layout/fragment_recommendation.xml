@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_recommend"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/btn_radius_brown"
+            android:clickable="false"
+            android:padding="10dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/no_thanks"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/btn_add_to_cart"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="176dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="200dp"
+            android:background="@null"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2"
+            tools:listitem="@layout/item_recommendation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".05" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

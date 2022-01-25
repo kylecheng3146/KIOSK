@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F0F1"
+    tools:context="com.lafresh.kiosk.activity.EasyCardActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="1080dp"
+        android:layout_height="66dp"
+        android:src="@drawable/page_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAd"
+        android:layout_width="1080dp"
+        android:layout_height="380dp"
+        android:src="@drawable/page_ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:layout_marginTop="44dp"
+        android:layout_toEndOf="@+id/iv_easyCard"
+        android:text="@string/scanEasyCard"
+        android:textColor="#000"
+        android:textSize="48sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/rlQnA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_easyCard" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="123dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignStart="@+id/tvTitle"
+        android:layout_marginTop="5dp"
+        android:text="@string/scanEasyCardMsg"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/rlQnA"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/startDongle"
+        android:textColor="#000"
+        android:textSize="64sp"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="1229dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rlQnA"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_black"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/selector_btn_no_text"
+            android:text="@string/restart_sensing"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_black"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_marginBottom="320dp"
+        android:background="#000"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="#FFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_black">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="426dp"
+            android:layout_height="145dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="327dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/login_select_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/iv_easyCard"
+        android:layout_width="0dp"
+        android:layout_height="768dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="79dp"
+        android:src="@drawable/easycard_sensing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

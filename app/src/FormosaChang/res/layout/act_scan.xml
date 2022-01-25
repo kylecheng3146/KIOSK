@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.ScanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            style="@style/PageTop">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_black"
+            android:layout_below="@+id/rl_ad"
+            android:background="@color/transparency50Bg">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="32sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="760dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_cellPhone"
+                    android:layout_width="255dp"
+                    android:layout_height="425dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_smartphone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_toEndOf="@+id/iv_cellPhone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title1"
+                        style="@style/WindowTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="96dp"
+                        android:text="@string/memberLogin"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title2"
+                        style="@style/WindowContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/loginMsg"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_fail"
+                        style="@style/BigTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/scanFail"
+                        android:textColor="@color/vermilion"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_center"
+                android:layout_alignStart="@+id/rl_center"
+                android:layout_alignEnd="@+id/rl_center"
+                android:layout_marginTop="64dp">
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="400dp"
+                    android:layout_height="1dp"
+                    android:inputType="none"
+                    android:textSize="32sp" />
+
+                <Button
+                    android:id="@+id/btn_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_toEndOf="@+id/et_code"
+                    android:padding="8dp"
+                    android:text="@string/pasteCode"
+                    android:textSize="32sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnInputCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_toEndOf="@+id/et_code"
+                    android:background="@drawable/selector_btn_taste_select"
+                    android:text="輸入捐贈碼"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            style="@style/PageBottom"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/page_bottom" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="425dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_back" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pgb"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_black"
+        android:layout_below="@+id/rl_ad"
+        android:background="#FFF"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

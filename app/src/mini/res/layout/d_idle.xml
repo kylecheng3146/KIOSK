@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_idle"
+                android:layout_width="173dp"
+                android:layout_height="172dp"
+                android:layout_above="@+id/vMiddle"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="56dp"
+                android:src="@drawable/icon_clock" />
+
+            <TextView
+                android:id="@+id/tv_title1"
+                style="@style/WindowTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_idle"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/iv_idle"
+                android:text="@string/idledTimeMsg"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                style="@style/WindowContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title1"
+                android:layout_alignStart="@+id/tv_title1"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/continueOrder"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/vMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/paleGray" />
+
+            <Button
+                android:id="@+id/btn_backHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vMiddle"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="64dp"
+                android:layout_toStartOf="@+id/vCenterVertical"
+                android:background="@drawable/selector_btn_back_home" />
+
+            <View
+                android:id="@+id/vCenterVertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vMiddle"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="64dp"
+                android:layout_toEndOf="@+id/vCenterVertical"
+                android:background="@drawable/selector_btn_continue" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

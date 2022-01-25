@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('NuwaSDK-2020-09-23_0949_2.1.0.04_a77ee1.aar'))

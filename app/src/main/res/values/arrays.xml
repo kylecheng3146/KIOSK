@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  連線環境  -->
+    <string-array name="urls">
+        <item>https://kiosk.lafresh.com.tw/kiosk/apptest</item>
+        <item>https://kiosk.lafresh.com.tw/kiosk/app</item>
+        <item>http://52.184.96.149:8085/app</item>
+        <item>http://kiosk.lafresh.com.tw:8080/kiosk/app_gray</item>
+    </string-array>
+
+    <!--  公司 auth Key  -->
+    <string-array name="keys">
+        <item>vbuf8b1blyrm7k7fbnrfpu59twhkuywg</item>
+        <item>ahdmx5qiexgm7ptfx10ohsw93y8wdsqr</item>
+        <item>j2kw4yn3nrhktaek432pgfg65gahm549</item>
+        <item>x3jjfj7k3e44g93aewbb3ebhpxxyr9wz</item>
+        <item>mt8tepzjquufjj9zt95dfjazy5dqphjg</item>
+        <item>x2gltubln8uhg5w7y3w88qu3qr9tq8uc</item>
+        <item>qlpftsb89l1jqrc5mljpa847quympxtq</item>
+        <item>bvzgj25b9qcpu3va2y9ad9defhrttxfs</item>
+        <item>qnfa7c5j2xvld63w6hpg42wzyxad18k9</item>
+        <item>l72347gc3f5czks9subqkldq9abu8sr5</item>
+        <item>tabap6fnlbm552fc9h4by4byvg67tqtp</item>
+        <item>b5bxzhm9wcv6x71szycg3gfrljtbhbu3</item>
+        <item>n8rwq82cn28bxt5g7h3vvrw2cna7de26</item>
+        <item>haxbhl1ehu891ptmmeapdk141wklc8nl</item>
+        <item>vctrkc3pzvsswmecq69w3cyp2xynzz62</item>
+        <item>8e7ccynlhbhdx1ecfzmklwmjqk6egzpk</item>
+        <item>94m8btu5tdp1z16khjb3sfvzkxgkmfw8</item>
+        <item>tj37n6dnq7hgbtc1t67ke1ylsceyc8e9</item>
+        <item>ebtpnjj1bh8j3qpgaldqbv3rvujwm7pl</item>
+        <item>xb1ej7rbv4n1xmdkmedgw1jd4hm24qde</item>
+        <item>mt8tepzjquufjj9zt95dfjazy5dqphjg</item>
+        <item>yt532l5w5519z7lr9f3kt18s6fvn8fgm</item>
+        <item>x3jjfj7k3e44g93aewbb3ebhpxxyr9wz</item>
+        <item>lu7eqgd466ezbtdl87n22v6tkmvv2qmz</item>
+        <item>19qxecx6mz7lvmkpqr1bttazsgq1bkv9</item>
+        <item>2t1dpdpt3uzdpanvbxmg8m14xyfjgwty</item>
+        <item>cb76me7vsga2rl81zllpkbvpxayepd2a</item>
+        <item>y6tl3jn22dpdjscqwsb6qexqzsv2qrca</item>
+        <item>uyrnul2xqz5p9uf4e4e9vpntqe7nznrp</item>
+        <item>pk4n71wk84zye1jcf5rpkbgfhj6a22fz</item>
+        <item>x36cmfjefbjkzmngnjl8kh7kdayuqs4n</item>
+        <item>qnfa7c5j2xvld63w6hpg42wzyxad18k9</item>
+        <item>q4ebxalfk31amtu1r29a85er37khbe49</item>
+        <item>3xnpgeev63awksfbhw8h47p1x7v6kzey</item>
+        <item>z3xh4kdfqfabl4gfewvnwryzje8bcxs5</item>
+        <item>g6w118ru6317tnn4mng9muul9s8bvrv9</item>
+        <item>1d82uwp4qp5st5n43c5c4jzt7162cmf3</item>
+        <item>yjyrtbkjlhyh3vfk763qxs2kalpvq31f</item>
+        <item>qfyb1asggspzk7x4p2jj7q32lph89hp1</item>
+        <item>avn49w93sa21scsy14zvamsk8skdfwm4</item>
+        <item>7kamxm7j2baumz34gm2gbgehxsh1cbnq</item>
+        <item>52lp15bvyn3k6pvmt8zf99twgq29puum</item>
+        <item>pdrfs686wsn5kj9brfrerpzgwewgd3nz</item>
+        <item>986mnmun57zuy5fyawqfdkbkk35bdyl7</item>
+        <item>qsach25nw2vlmqp74vnlyr2k9hrrepgj</item>
+        <item>fdq22lpwensytctyk8grjz2vjkecvjhv</item>
+        <item>q27blsfj6761cxzqfukscfyadtqgvlun</item>
+        <item>3a9mtkzer775pylt67uy3t3kzjbyvvzp</item>
+        <item>vrxfewmn9hnvdxw582qk3v9pecfa5kwd</item>
+        <item>j2kw4yn3nrhktaek432pgfg65gahm549</item>
+        <item>j8p8a83sgelr1bqrpbg1vubfjgfw6c92</item>
+        <item>3fzufzhqeuzc56drkteyljnac2axq2zr</item>
+        <item>zqfu9q8k4taxnddlrxszzm6pz38zgx5h</item>
+        <item>va5946y9e78t5bf8p7dr31j1rm4fwfm6</item>
+        <item>gf1z7hgnch9ygsft9a8777c7n1vt2b9j</item>
+        <item>2wgw24fblsfm53km1fv5lde84vvcxztl</item>
+        <item>ffzd2d4n1zs9ldh5tye8rgsdbxekdnln</item>
+        <item>allrusc1tm4xw73dtme7qtusqap5kxk4</item>
+        <item>xved2djkupmsj9kmyj9fa9z8m623ekun</item>
+        <item>ukgjrmaaattt7wn5nrq5j4gh8b2tzuyh</item>
+        <item>yzc5yljbb4qtznasaktq2lglsfxf5y9q</item>
+        <item>k21x77ewnhrseune7qvb5ledklqtmstd</item>
+        <item>gddxw6nrfebjwah9mtavvzqee4rakshp</item>
+        <item>vbr2zm1re6t462822sa1nadxrp64u8vx</item>
+        <item>2w2dywfutbna79pqjqnlmb2kjdvsun2c</item>
+        <item>9y61kc6e81hud2sbzx1nnpkaw8urhtgs</item>
+        <item>vha1359jl38nx8djh6hyq153mq6vtkus</item>
+        <item>v32lgfy6hdq7y69pr95a62new6zsz3bc</item>
+        <item>z276mseb51vef52mydvg9hdl1rhzc5g1</item>
+        <item>2kub51ngrn57f6kht2k9ruudlydzhwlj</item>
+        <item>f34qgp6gh3fh8w9nnpv1qd72195bg7yy</item>
+        <item>ztluynypw7f2u95bl98czbjcwmy8jhnc</item>
+        <item>1k5rhfsbgspkxzbea9f443v582qly9v1</item>
+        <item>exr12xzjrmwe7knpq2ptfu6yy31ew2wn</item>
+        <item>3dy3yb5kgfjqa2bbzq8j1ptulxcnh2l8</item>
+        <item>k3zxss4qymnkblvxpnq5uuflq4fhss75</item>
+        <item>9e4xy91myylgmytn8j71ktddnyx7eyyp</item>
+        <item>j4hxhq6tvjp5my8v2ls6s4kuarvrsx97</item>
+        <item>yj5qhrj96ezgbl5bkul3v75bg2hj6yuu</item>
+        <item>25syms5bcmhyb7wk4bkedxgwzenzjnfp</item>
+        <item>nyj1qv6tc51vgfeut7tw52qhbyety2wd</item>
+        <item>p45vw5gxpx1bk4xdra1y882u7vqwtkja</item>
+        <item>va1mchj1cgvqhldz75ff2ss7g77d5msn</item>
+        <item>l3aygewzgcnb7cetae8t8uy236lxpup6</item>
+        <item>tbl9t9jj3eguj9zfpjbtjgj623szk4mm</item>
+        <item>1mt6b9bzz5dp66w5ursnvx1cwkqf2l79</item>
+        <item>azqwzh4kz91nedggpcjeag215n4d1rdp</item>
+        <item>aw3c6y6f61g3vt1zkhdjx66zza3mtqe4</item>
+        <item>enu3quz19kxk7xq7p3rfluts4718tusc</item>
+        <item>z3z3qzc1e4h9jvl6lqe2thmv4fyrcqk6</item>
+        <item>m2j4rwgvz5owly7spuj11670yj2f4q4s</item>
+        <item>jnxu9h4ac42n1wzku89ftr8c212bmqpk</item>
+        <item>8cslgnybgz2zlt64vtqqumcer4f67tfr</item>
+        <item>vqgbturz6eu9e9lmkazz8d20tvkqig0a</item>
+        <item>4383fw1qyb7xg7uh7az5mvwbeb8k5ph1</item>
+        <item>71qgxj2ncf761yvt8djscv92kj7y9dcx</item>
+        <item>l8tukt9jxczkvz534jfssy4fkrhn66vd</item>
+    </string-array>
+
+    <!--  快取URL  -->
+    <string-array name="urls_for_cache">
+        <item>http://omni1.lafresh.com.tw:8090</item>
+        <item>http://omni.lafresh.com.tw:8083</item>
+        <item>http://52.184.96.149:8086</item>
+        <item>https://omni.lafresh.com.tw</item>
+        <item>http://omni2.lafresh.com.tw</item>
+    </string-array>
+</resources>

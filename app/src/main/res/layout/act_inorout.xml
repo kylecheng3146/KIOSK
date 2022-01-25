@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.DiningOptionActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:src="@drawable/page_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAd"
+        android:layout_width="1080dp"
+        android:layout_height="380dp"
+        android:src="@drawable/page_ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <RelativeLayout
+        android:id="@+id/rlBigButton"
+        android:layout_width="1076dp"
+        android:layout_height="809dp"
+        android:layout_above="@+id/tv_login"
+        android:layout_below="@+id/rl_ad"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd">
+
+        <Button
+            android:id="@+id/btnBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_btn_big_sale_method"
+            android:onClick="onClick"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btnBigBrush"
+            android:layout_width="256dp"
+            android:layout_height="68dp"
+            android:layout_below="@+id/btnBig"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/brush246_select"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:textSize="48sp" />
+
+        <!--為了過flavor build用，實際上沒用-->
+        <TextView
+            android:id="@+id/tvBigButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnBig"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_brands"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_login"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd"
+        app:layout_constraintVertical_bias="1.0"
+        app:spanCount="4"
+        tools:listitem="@layout/item_payments"
+        android:visibility="gone"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_login"
+        android:background="#FFF"
+        android:elevation="-5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/btn_main_theme"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:gravity="center"
+            android:text="@string/i_want_to_earn_points"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dining_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select"
+            app:layout_constraintVertical_bias="0.6"
+            app:spanCount="2"
+            tools:listitem="@layout/item_dining_option" />
+
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/selectSaleMethod"
+            android:textColor="#000"
+            android:textSize="64sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/tv_welcome_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="64sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tv_select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:background="#000"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/loginPlease"
+        android:textColor="#FFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_welcome"
+            android:layout_width="545dp"
+            android:layout_height="173dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_name_select"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="1080dp"
+            android:layout_height="350dp"
+            android:background="@drawable/inorout_bottom"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/btn_return"
+            style="@style/btn_main_theme"
+            android:text="@string/return_previous_page_one_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

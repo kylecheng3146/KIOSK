@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent="1" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent="1" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/orderBuilding"
+            android:textSize="64sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_AD"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cl_barcode"
+            android:layout_below="@id/RL_AD">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/selectedOrders"
+                android:textColor="#FFF"
+                android:textSize="32sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rlRedArea"
+                android:layout_below="@+id/tv_title"
+                android:padding="32dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/row_order" />
+
+                    <include layout="@layout/row_order" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!--            <ToggleButton-->
+            <!--                android:id="@+id/tbPoint"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:layout_marginStart="16dp"-->
+            <!--                android:layout_marginBottom="50dp"-->
+            <!--                android:background="@drawable/toggle_botton_selector"-->
+            <!--                android:textOff=""-->
+            <!--                android:textOn=""-->
+            <!--                android:textSize="32sp" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvPointRedeem"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:layout_marginBottom="50dp"-->
+            <!--                android:layout_toEndOf="@id/tbPoint"-->
+            <!--                android:layout_marginStart="6dp"-->
+            <!--                android:text="@string/usePointToggle"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="32sp" />-->
+
+            <RelativeLayout
+                android:id="@+id/rlRedArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlTicketDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/frame_discount"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/ticketDiscount"
+                        android:textColor="#FF0000"
+                        android:textSize="32sp" />
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="200dp">
+
+                        <TextView
+                            android:id="@+id/tvTicketDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF0000"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="50dp">
+
+                        <Button
+                            android:id="@+id/btnRemoveTicket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_clear"
+                            android:text="X"
+                            android:textColor="#FF0000"
+                            android:textSize="32sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTicketDiscount"
+                    android:background="@drawable/frame_discount"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/discountTitle"
+                        android:textColor="#FF0000"
+                        android:textSize="32sp" />
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="200dp">
+
+                        <TextView
+                            android:id="@+id/tvDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF0000"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_total"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000">
+
+            <RelativeLayout
+                android:id="@+id/rlOriginPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@+id/rlTotalPrice"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvOpTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/tvOriginPrice"
+                    android:text="@string/originPrice"
+                    android:textColor="@color/lightGray"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tvOriginPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/lightGray"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tv_total_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/totalAmount"
+                    android:textColor="#FFF"
+                    android:textSize="48sp" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_total_"
+                    android:text="@string/orderBuilding"
+                    android:textColor="@color/orange"
+                    android:textSize="52sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_restart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_restart"
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_btn_orange_circle"
+                        android:text="@string/reordering"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/Btn_CouponDiscount"
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_btn_orange_circle"
+                        android:text="@string/use_coupon"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_btn_orange_circle"
+                        android:text="@string/add_more"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="32dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/Btn_PointDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_general"
+                    android:text="@string/redeemPoints"
+                    android:textColor="#FFF"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_above="@id/rl_total"
+            android:background="#707070"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="請掃描條碼："
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_barcode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="300dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/et_barcode"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="textPersonName"
+                android:textColor="#707070"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_no_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rl_total"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_no_barcode"
+            android:text="無條碼商品\n請 點 此"
+            android:textSize="38sp" />
+
+        <pl.droidsonroids.gif.GifImageButton
+            android:id="@+id/gifBtnConfirmOrder"
+            android:layout_width="206dp"
+            android:layout_height="206dp"
+            android:layout_alignBottom="@+id/rl_total"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="-38dp"
+            android:background="@drawable/gif_confirm_order" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

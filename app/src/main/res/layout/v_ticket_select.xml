@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ticket"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="480dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_clear">
+
+        <RelativeLayout
+            android:id="@+id/rl_check"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ticket_iv_border_corner">
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ticket_check" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/rl_check"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:padding="2dp"
+            android:textColor="#000"
+            android:textSize="42sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

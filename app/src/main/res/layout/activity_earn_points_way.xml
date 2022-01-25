@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.EarnPointsWayActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="1dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlBigButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_login"
+            android:layout_below="@+id/rl_ad"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_big_sale_method"
+                android:onClick="onClick"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/btnBigBrush"
+                android:layout_width="256dp"
+                android:layout_height="68dp"
+                android:layout_below="@+id/btnBig"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/brush246_select"
+                android:onClick="onClick"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+            <!--為了過flavor build用，實際上沒用-->
+            <TextView
+                android:id="@+id/tvBigButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btnBig"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_login"
+            android:layout_below="@+id/rl_ad"
+            android:background="#FFF">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_member"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="83dp"
+                android:layout_marginEnd="80dp"
+                android:background="@drawable/radius_bg"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/member_login_scan" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/memberLogin"
+                    android:textColor="@color/black"
+                    android:textSize="80sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="120dp"
+                    android:text="@string/scan_barcode"
+                    android:textColor="#aa3333"
+                    android:textSize="80sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="83dp"
+                android:background="@drawable/radius_bg"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginBottom="38dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/member_phone" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="240dp"
+                    android:text="@string/earn_points"
+                    android:textColor="#aa3333"
+                    android:textSize="80sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="160dp"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/black"
+                    android:textSize="80sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_return"
+                style="@style/btn_main_theme"
+                android:text="@string/return_previous_page_one_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/inorout_bottom"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/inorout_bottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

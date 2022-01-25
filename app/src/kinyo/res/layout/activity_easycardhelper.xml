@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="60dp"
+    android:orientation="vertical">
+
+    <!--<DatePicker-->
+    <!--android:id="@+id/datePicker"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:calendarViewShown="false" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="悠遊卡批次編號(Batch Number)："
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etBatchNo"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:inputType="number"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:text="@string/ezCardCheckout"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:text="@string/back"
+        android:textSize="32sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="20sp" />
+
+    </ScrollView>
+
+</LinearLayout>

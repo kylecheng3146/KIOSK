@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/paleGray">
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_menu_header"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_cellPhone"
+            android:layout_width="200dp"
+            android:layout_height="335dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="120dp"
+            android:src="@drawable/icon_smartphone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="64dp"
+            android:layout_toEndOf="@+id/iv_cellPhone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title1"
+                style="@style/BigTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="@string/memberLogin"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                style="@style/WindowContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:letterSpacing="0.1"
+                android:text="@string/loginMsg"
+                android:textColor="@color/coalBlack" />
+
+            <TextView
+                android:id="@+id/tv_fail"
+                style="@style/BigTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/scanFail"
+                android:textColor="@color/vermilion"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cellPhone"
+            android:layout_marginTop="64dp">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="400dp"
+                android:layout_height="1dp"
+                android:inputType="none"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/btnInputCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@+id/et_code"
+                android:background="@drawable/selector_btn_taste_select"
+                android:text="輸入捐贈碼"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pgb"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/right_menu" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="55dp"
+            android:background="@drawable/selector_btn_back" />
+    </RelativeLayout>
+
+</LinearLayout>

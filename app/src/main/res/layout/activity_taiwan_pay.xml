@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.ScanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_black"
+            android:layout_below="@+id/rl_ad"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="32sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="930dp"
+                android:layout_height="427dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/givLinePay"
+                    android:layout_width="480dp"
+                    android:layout_height="480dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/gif_taiwan_pay" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="64dp"
+                    android:layout_toEndOf="@+id/givLinePay"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="96dp"
+                        android:text="@string/memberLogin"
+                        android:textColor="#aa3333"
+                        android:textSize="48sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/loginMsg"
+                        android:textColor="#000"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_center"
+                android:layout_alignStart="@+id/rl_center"
+                android:layout_alignEnd="@+id/rl_center"
+                android:layout_marginTop="64dp">
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textSize="32sp" />
+
+                <Button
+                    android:id="@+id/btn_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_toEndOf="@+id/et_code"
+                    android:padding="8dp"
+                    android:text="@string/pasteCode"
+                    android:textSize="32sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnInputCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_toEndOf="@+id/et_code"
+                    android:background="@drawable/combitem_select_taste"
+                    android:text="輸入捐贈碼"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pasteCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFF">
+
+                    <TextView
+                        android:id="@+id/tv_fail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/scanFail"
+                        android:textColor="#000"
+                        android:textSize="36sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="350dp"
+                android:background="@drawable/inorout_bottom"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btn_back"
+                style="@style/btn_main_theme"
+                android:layout_width="426dp"
+                android:layout_height="145dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/back"/>
+
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pgb"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

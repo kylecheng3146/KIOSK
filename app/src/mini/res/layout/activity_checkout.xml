@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_mid"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/btn_vehicle"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="48dp"
+                android:background="@drawable/selector_btn_vehicle" />
+
+            <EditText
+                android:id="@+id/et_vehicle"
+                style="@style/EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_vehicle"
+                android:layout_alignStart="@+id/btn_vehicle"
+                android:layout_below="@+id/btn_vehicle"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tv_border_01"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="@string/scanVehicle"
+                android:padding="8dp"
+                android:textColor="#555" />
+
+            <Button
+                android:id="@+id/btn_donate"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_npo" />
+
+            <EditText
+                android:id="@+id/et_donate"
+                style="@style/EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_donate"
+                android:layout_alignStart="@+id/btn_donate"
+                android:layout_below="@+id/btn_donate"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tv_border_01"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="@string/scanDonateNo"
+                android:padding="8dp"
+                android:textColor="#555" />
+
+            <Button
+                android:id="@+id/btn_taxId"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/selector_btn_tax_number" />
+
+            <EditText
+                android:id="@+id/et_taxId"
+                style="@style/EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_taxId"
+                android:layout_alignStart="@+id/btn_taxId"
+                android:layout_below="@+id/btn_taxId"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tv_border_01"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="@string/insert"
+                android:padding="8dp"
+                android:textColor="#555" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mid"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="48dp"
+            android:layout_marginStart="48dp"
+            android:background="@color/black">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_mid">
+
+            <TextView
+                style="@style/BlackBgTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:gravity="center"
+                android:text="@string/selectPayMethod"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <Button
+                android:id="@+id/Btn_Card"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/Btn_QRCode"
+                android:layout_marginStart="48dp"
+                android:background="@drawable/selector_btn_easycard" />
+
+            <Button
+                android:id="@+id/Btn_QRCode"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_line_pay" />
+
+            <Button
+                android:id="@+id/Btn_Cash"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/Btn_QRCode"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/selector_btn_counter_checkout" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/right_menu" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55dp"
+            android:background="@drawable/selector_btn_back" />
+
+        <Button
+            android:id="@+id/btn_earn_points"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkout_back_select"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

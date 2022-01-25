@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        android:padding="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:textSize="48sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="username"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="password"
+                        android:textSize="48sp" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="256dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="32dp"
+                        android:text="login"
+                        android:textSize="32sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_config"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="伺服器網址："
+                        android:textColor="#000"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/et_ApiRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="伺服器網址"
+                        android:text="http://testiis.la-join.com.tw:9443/kiosk/app"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="authkey:"
+                        android:textColor="#000"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/etAuthKey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="vip_id (acckey?)"
+                        android:text="j2kw4yn3nrhktaek432pgfg65gahm549"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop_id："
+                        android:textColor="#000"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/et_shopId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="shop_id"
+                        android:text="X0058"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kiosk_id:"
+                        android:textColor="#000"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/et_kioskId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="kiosk_id"
+                        android:maxLength="2"
+                        android:text="K1"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="預設認證授權碼(acckey):"
+                        android:textColor="#000"
+                        android:textSize="48sp" />
+
+                    <EditText
+                        android:id="@+id/et_acckey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="vip_id (acckey?)"
+                        android:text="wmfdph8dxlh9lyfj2a8vv58hcm1dhl5x"
+                        android:textSize="48sp" />
+
+
+                    <Button
+                        android:id="@+id/btn_ok"
+                        android:layout_width="256dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="64dp"
+                        android:text="ok"
+                        android:textSize="32sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="256dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:text="Back"
+                    android:textSize="32sp" />
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnMagic"-->
+                    <!--android:layout_width="256dp"-->
+                    <!--android:layout_height="64dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_margin="32dp"-->
+                    <!--android:text="magic"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:textSize="32sp" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnDefault"-->
+                    <!--android:layout_width="256dp"-->
+                    <!--android:layout_height="64dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_margin="32dp"-->
+                    <!--android:text="default"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:textSize="32sp" />-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

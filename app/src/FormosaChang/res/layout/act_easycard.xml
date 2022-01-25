@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.EasyCardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_black"
+            android:layout_below="@+id/rl_ad"
+            android:background="@color/transparency50Bg">
+
+            <RelativeLayout
+                android:id="@+id/rlQnA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/vMiddle">
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    style="@style/BigTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:text="@string/startDongle"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnYes"
+                    android:layout_width="195dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/tvQuestion"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/selector_btn_yes" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/vMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@color/dustGray" />
+
+            <RelativeLayout
+                android:id="@+id/rlMessage"
+                android:layout_width="720dp"
+                android:layout_height="360dp"
+                android:layout_below="@+id/vMiddle"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="100dp">
+
+                <ImageView
+                    android:id="@+id/iv_easyCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_easy_card" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/WindowTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_toEndOf="@+id/iv_easyCard"
+                    android:text="@string/scanEasyCard"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    style="@style/WindowContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_alignStart="@+id/tvTitle"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/scanEasyCardMsg"
+                    android:textColor="#000" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            style="@style/PageBottom"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="425dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_back" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

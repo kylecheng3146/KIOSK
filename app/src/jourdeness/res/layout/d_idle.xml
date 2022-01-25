@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".7" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_idle"
+                android:layout_width="237dp"
+                android:layout_height="236dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="128dp"
+                android:src="@mipmap/idle" />
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_idle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toEndOf="@+id/iv_idle"
+                android:text="@string/idledTimeMsg"
+                android:textColor="#000"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title1"
+                android:layout_alignStart="@+id/tv_title1"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/continueOrder"
+                android:textColor="#000"
+                android:textSize="38sp" />
+
+            <Button
+                android:id="@+id/btn_backHome"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_alignTop="@+id/btn_continue"
+                android:layout_marginEnd="36dp"
+                android:layout_toStartOf="@+id/btn_continue"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/returnHomeButton"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_below="@+id/tv_title2"
+                android:layout_alignEnd="@+id/tv_title1"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/continue_ordering"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

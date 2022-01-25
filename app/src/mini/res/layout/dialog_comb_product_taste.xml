@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_choose_taste" />
+
+            <ScrollView
+                android:id="@+id/scv_taste"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title"
+                android:layout_margin="8dp"
+                android:layout_toStartOf="@id/rlLeft"
+                android:background="#FFF">
+
+                <LinearLayout
+                    android:id="@+id/ll_taste"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/row_taste" />
+
+                    <include layout="@layout/row_taste" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rlLeft"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_dialog_gray_menu">
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/vRightCenterVertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/selector_btn_ok" />
+
+                <View
+                    android:id="@+id/vRightCenterVertical"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerVertical="true" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vRightCenterVertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/selector_btn_back_front" />
+
+            </RelativeLayout>
+
+
+            <ProgressBar
+                android:id="@+id/pgd_taste"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mini_size">56sp</dimen>
+    <!--3個載具選項時的元件大小    -->
+    <dimen name="receipt_component_size">233dp</dimen>
+    <dimen name="receipt_component_size_height">90dp</dimen>
+</resources>

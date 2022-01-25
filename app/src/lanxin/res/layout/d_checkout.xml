@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!-- AppBar layout for using Toolbar as AppBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ToolBar widget -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title=""
+                app:titleTextColor="#ffff" />
+
+            <!-- Right most ImageView -->
+            <ImageButton
+                android:id="@+id/ib_restart"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="fitCenter"
+                android:background="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/back_arrow" />
+
+            <!-- center most TextView -->
+            <TextView
+                android:id="@+id/centerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/checkout_title"
+                android:textColor="@color/skin"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:src="@drawable/page_title"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAd"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:src="@drawable/page_ad"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_receipt_module"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/deepGray"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/C1"
+            style="@style/CL_H"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/invoice_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/save_invoice_type2"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_memberCarrier"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_title"
+            android:visibility="gone">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:text="@string/memberCarrier"
+                    android:textSize="22dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ABC1234567890"
+                    android:textSize="22dp"
+                    android:textColor="@color/deepGray"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_confirm_cancel"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_paper_invoice"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_title"
+            app:layout_constraintEnd_toStartOf="@+id/C1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:layout_weight="0.5"
+                android:text="@string/paper_invoice"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="21dp"/>
+
+            <ImageView
+                android:id="@+id/iv_paper_invoice"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_confirm_ok"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_taxId"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_title"
+            app:layout_constraintStart_toEndOf="@+id/C1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:layout_weight="0.5"
+                android:text="@string/tax_no"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="21dp"/>
+
+            <EditText
+                android:id="@+id/et_taxId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radius_edittext"
+                android:gravity="center"
+                android:hint="@string/insert"
+                android:textColor="@color/deepGray"
+                android:textColorHint="@color/deepGray"
+                android:textSize="21sp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vehicle"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ll_paper_invoice"
+            app:layout_constraintEnd_toStartOf="@+id/C1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:layout_weight="0.5"
+                android:text="@string/vehicle"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="21dp"/>
+
+            <EditText
+                android:id="@+id/et_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radius_edittext"
+                android:gravity="center"
+                android:hint="@string/scanDonateNo"
+                android:textColor="@color/deepGray"
+                android:textColorHint="@color/deepGray"
+                android:textSize="21sp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_donate"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ll_taxId"
+            app:layout_constraintStart_toEndOf="@+id/C1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:layout_weight="0.5"
+                android:text="@string/donate_code"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="21dp"/>
+
+            <EditText
+                android:id="@+id/et_donate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radius_edittext"
+                android:gravity="center"
+                android:hint="@string/scanDonateNo"
+                android:textColor="@color/deepGray"
+                android:textColorHint="@color/deepGray"
+                android:textSize="21sp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_memberCarrier"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/ll_memberCarrier"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btn_taxId"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/tax_no"
+            android:textSize="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_title"
+            app:layout_constraintStart_toEndOf="@+id/C1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_vehicle"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/vehicle"
+            android:textSize="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_paper_invoice"
+            app:layout_constraintEnd_toStartOf="@+id/C1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_donate"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size_height"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/donate_code"
+            android:textSize="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_taxId"
+            app:layout_constraintStart_toEndOf="@+id/C1"
+            android:visibility="gone"/>
+
+
+
+        <EditText
+            android:id="@+id/et_memberCarrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_edittext"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="@string/scanVehicle"
+            android:padding="8dp"
+            android:textColor="#555"
+            android:textColorHint="@color/black"
+            android:textSize="26sp"
+            android:visibility="gone"/>
+
+
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/ib_vehicle_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/ll_vehicle"
+            app:layout_constraintTop_toTopOf="@+id/ll_vehicle"
+            app:srcCompat="@drawable/icon_close" />
+
+        <ImageButton
+            android:id="@+id/ib_donate_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/ll_donate"
+            app:layout_constraintTop_toTopOf="@+id/ll_donate"
+            app:srcCompat="@drawable/icon_close" />
+
+        <ImageButton
+            android:id="@+id/ib_taxId_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/ll_taxId"
+            app:layout_constraintTop_toTopOf="@+id/ll_taxId"
+            app:srcCompat="@drawable/icon_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_separate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/separate"
+        app:layout_constraintTop_toBottomOf="@+id/rl_receipt_module">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:background="@color/deepGray"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/rl_separate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pickup_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_pickup_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:text="@string/pickupMethod"
+                    android:textColor="#000"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pickup_methods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pickup_method"
+                    app:spanCount="4"
+                    tools:listitem="@layout/item_payments" />
+
+                <TextView
+                    android:id="@+id/tv_pickup_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/ironOxideRed"
+                    android:textSize="48sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_pickup_methods" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_pay_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selectPayMethod"
+                    android:textColor="@color/white"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_paymemts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pay_method"
+                    app:spanCount="2"
+                    tools:listitem="@layout/item_payments">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_total"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight=".65">
+
+                <Button
+                    android:id="@+id/btn_discount"
+                    android:layout_width="168dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_discount"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight=".35">
+
+                <Button
+                    android:id="@+id/btn_submit_order"
+                    android:layout_width="285dp"
+                    android:layout_height="54dp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_submit_order_cancel"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_btn_orange_circle"
+            android:text="@string/return_previous_page"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_earn_points"
+            style="@style/btn_main_theme"
+            android:text="我要集點"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/inorout_bottom"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_total"
+            app:layout_constraintVertical_bias="0.0"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_total"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:gravity="center"
+            android:background="#000"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:text="應付總金額"
+                    android:gravity="center"
+                    android:textSize="21dp"
+                    android:textColor="@color/kinyo_product_cate_dark_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:text="$100"
+                    android:textSize="34dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/C1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="64dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Btn_Card"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/checkout_easycard_select"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Btn_QRCode"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:text="@string/linePay"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnNccc"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_card_pay"
+                android:textSize="48sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/Btn_Cash"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/checkout_cash_select"
+                android:textSize="48sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnAddOne"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:textSize="45sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnPiPay"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:text="@string/piPay"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_easy_wallet"
+        style="@style/Btn_Dialog_01"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/selector_btn_no_text"
+        android:text="悠遊付"
+        android:textSize="48sp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

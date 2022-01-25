@@ -1,0 +1,33 @@
+image: docker:19.03.12
+
+services:
+  - name: docker:19.03.12-dind
+    # command: ["--insecure-registry=192.168.0.100:9002"]
+
+variables:
+  DOCKER_HOST: tcp://192.168.0.100:2375
+  DOCKER_TLS_CERTDIR: ""
+  # GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  # - test
+  - build
+  # - deploy
+
+# test:
+#   stage: test
+#   script:
+#     - docker build -f Dockerfile-dev . --network host
+#   only:
+#     - ci-test
+
+
+build:
+  stage: build
+  # variables:
+  #   IMAGE_TAG: $CI_REGISTRY_IMAGE/omni:$CI_COMMIT_REF_NAME
+  script:
+    # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    # - docker build -t $IMAGE_TAG ./omni --network host
+    - docker build . --network host
+    # - docker push $IMAGE_TAG

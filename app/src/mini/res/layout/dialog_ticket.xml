@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/popup_grayBg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/BlackBgTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#000"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="@string/chooseTicket"
+                android:textColor="#FFF" />
+
+            <ScrollView
+                android:id="@+id/scv_taste"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title"
+                android:layout_margin="8dp"
+                android:layout_toStartOf="@+id/rl_bottom"
+                android:background="#FFF">
+
+                <GridLayout
+                    android:id="@+id/gl_ticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:columnCount="2">
+
+                    <include layout="@layout/v_ticket_select" />
+
+                    <include layout="@layout/v_ticket_select" />
+
+                    <include layout="@layout/v_ticket_select" />
+
+                </GridLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title"
+                android:layout_alignParentEnd="true"
+                android:background="@color/lightGray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_btn_use_ticket"
+                    tools:ignore="UnknownIdInLayout" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/selector_btn_back_front"
+                    tools:ignore="UnknownIdInLayout" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pgb"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

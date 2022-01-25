@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="370dp"
+        android:layout_height="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/kinyo_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_paid"
+            android:layout_width="230dp"
+            android:layout_height="217dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/paid" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="176dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="結帳完成"
+                android:textColor="@color/kinyo_product_cate_bg"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="您已付款成功， 謝謝！"
+                android:textColor="@color/kinyo_product_cate_bg"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_body"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top"
+        app:srcCompat="@drawable/banner2" />
+
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="180dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/button_back"
+        android:gravity="bottom|center"
+        android:paddingBottom="20dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="800dp"
+        android:layout_height="427dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/givCenterLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gif_paid" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="64dp"
+            android:layout_toEndOf="@+id/givCenterLeft"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp"
+                android:text="@string/paid"
+                android:textColor="#000"
+                android:textSize="54sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lines="2"
+                android:text="@string/takeReceipts"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wvGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_continue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_add_money_continue"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="398dp"
+                android:layout_marginTop="384dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/btn_get_money"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_get_money_continue"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/btn_add_money"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_add_money_continue"
+                app:layout_constraintTop_toTopOf="@+id/btn_add_money_continue" />
+
+            <Button
+                android:id="@+id/btn_cancel_continue"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/btn_add_money"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_get_money_continue"
+                app:layout_constraintTop_toTopOf="@+id/btn_add_money_continue" />
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="272dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="348dp"
+                android:layout_marginTop="236dp"
+                android:layout_marginEnd="138dp"
+                android:text="@string/cl_continue_title"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_total_price"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/btn_total_confirm"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_hundred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="269dp"
+                android:layout_marginTop="357dp"
+                android:text="TextView"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_fifty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_total_hundred"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_hundred" />
+
+            <TextView
+                android:id="@+id/tv_total_ten"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_total_fifty"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_fifty" />
+
+            <TextView
+                android:id="@+id/tv_total_five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_total_ten"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_ten" />
+
+            <TextView
+                android:id="@+id/tv_total_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_total_five"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_five" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="118dp"
+                android:layout_marginEnd="94dp"
+                android:text="@string/get_money_message"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="332dp"
+                android:layout_marginTop="524dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_checkout_confirm"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_back"
+                app:layout_constraintTop_toTopOf="@+id/btn_back" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/return_previous_page"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_exit"
+                app:layout_constraintTop_toTopOf="@+id/btn_exit" />
+
+            <CheckBox
+                android:id="@+id/cb_clear_coin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="91dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_clear_paper_money" />
+
+            <CheckBox
+                android:id="@+id/cb_clear_paper_money"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="293dp"
+                android:layout_marginEnd="91dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="272dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="清空收鈔匣"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_clear_paper_money"
+                app:layout_constraintEnd_toStartOf="@+id/cb_clear_paper_money"
+                app:layout_constraintStart_toEndOf="@+id/imageView16"
+                app:layout_constraintTop_toTopOf="@+id/cb_clear_paper_money" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="清空硬幣錢箱"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_clear_coin"
+                app:layout_constraintEnd_toStartOf="@+id/cb_clear_coin"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="@+id/cb_clear_coin" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="128dp"
+                android:layout_marginEnd="102dp"
+                android:gravity="center"
+                android:text="@string/cash_checkout_title"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView16"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_option"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/btn_get_money"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="384dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/btn_get_money"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_option_exit"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_add_money"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/btn_add_money"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_get_money"
+                app:layout_constraintTop_toTopOf="@+id/btn_get_money" />
+
+            <Button
+                android:id="@+id/btn_option_exit"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="398dp"
+                android:layout_marginTop="384dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="退出"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_inventory"
+                style="@style/btn_main_theme"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="50dp"
+                android:text="取得當前庫存"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_add_money"
+                app:layout_constraintStart_toStartOf="@+id/btn_option_exit"
+                app:layout_constraintTop_toBottomOf="@+id/btn_get_money" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="272dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/tv_option_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="348dp"
+                android:layout_marginTop="168dp"
+                android:layout_marginEnd="138dp"
+                android:text="@string/door_open"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="236dp"
+            android:text="@string/cash_module_message"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_checkbox_selection_page"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <CheckBox
+                android:id="@+id/cb_hundred"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="236dp"
+                android:layout_marginEnd="138dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cb_fifty"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb_hundred"
+                app:layout_constraintTop_toBottomOf="@+id/cb_hundred" />
+
+            <CheckBox
+                android:id="@+id/cb_ten"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb_fifty"
+                app:layout_constraintTop_toBottomOf="@+id/cb_fifty" />
+
+            <CheckBox
+                android:id="@+id/cb_five"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb_ten"
+                app:layout_constraintTop_toBottomOf="@+id/cb_ten" />
+
+            <CheckBox
+                android:id="@+id/cb_one"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cb_unchecked"
+                android:button="@null"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/cb_five"
+                app:layout_constraintTop_toBottomOf="@+id/cb_five" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="清空收鈔匣"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_hundred"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hundred"
+                app:layout_constraintStart_toEndOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="@+id/cb_hundred" />
+
+            <TextView
+                android:id="@+id/textView200"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="50元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_fifty"
+                app:layout_constraintEnd_toStartOf="@+id/cb_fifty"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="@+id/cb_fifty" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="10元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_ten"
+                app:layout_constraintEnd_toStartOf="@+id/cb_ten"
+                app:layout_constraintStart_toStartOf="@+id/textView200"
+                app:layout_constraintTop_toTopOf="@+id/cb_ten" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="5元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_five"
+                app:layout_constraintEnd_toStartOf="@+id/cb_five"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/cb_five" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|center_horizontal"
+                android:text="1元"
+                android:textColor="@color/black"
+                android:textSize="42dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_one"
+                app:layout_constraintEnd_toStartOf="@+id/cb_one"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="@+id/cb_one" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="273dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="340dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="104dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/get_money_title" />
+
+            <Button
+                android:id="@+id/btn_get_money_exit"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="332dp"
+                android:layout_marginTop="743dp"
+                android:background="@drawable/selector_btn_gray_circle"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_get_money_confirm"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_get_money_back"
+                app:layout_constraintTop_toTopOf="@+id/btn_get_money_back" />
+
+            <Button
+                android:id="@+id/btn_get_money_back"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/return_previous_page"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_get_money_exit"
+                app:layout_constraintTop_toTopOf="@+id/btn_get_money_exit" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_add_money_check_page"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView26"
+                android:layout_width="273dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/tv_add_money_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="340dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="104dp"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/add_money_title" />
+
+            <Button
+                android:id="@+id/btn_add_money_check_exit"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="743dp"
+                android:layout_marginEnd="49dp"
+                android:background="@drawable/selector_btn_gray_circle"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_money_check_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_add_money_check_confirm"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_add_money_check_back"
+                app:layout_constraintTop_toTopOf="@+id/btn_add_money_check_back" />
+
+            <Button
+                android:id="@+id/btn_add_money_check_back"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/return_previous_page"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_add_money_check_exit" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="290dp"
+                android:text="100元 *"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_hundred"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:maxLength="3"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                app:layout_constraintStart_toEndOf="@+id/textView24"
+                app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="張(吐鈔匣)"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/et_hundred"
+                app:layout_constraintTop_toTopOf="@+id/et_hundred" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:text="50元 *"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <EditText
+                android:id="@+id/et_fifty"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:maxLength="3"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintStart_toEndOf="@+id/textView26"
+                app:layout_constraintTop_toTopOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/et_fifty"
+                app:layout_constraintTop_toTopOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:text="10元 *"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <EditText
+                android:id="@+id/et_ten"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:maxLength="3"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                app:layout_constraintStart_toEndOf="@+id/textView27"
+                app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/et_ten"
+                app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:text="5元 *"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <EditText
+                android:id="@+id/et_five"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:maxLength="3"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView30"
+                app:layout_constraintStart_toEndOf="@+id/textView30"
+                app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/et_five"
+                app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:text="1元 *"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <EditText
+                android:id="@+id/et_one"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:maxLength="3"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                app:layout_constraintStart_toEndOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/et_one"
+                app:layout_constraintTop_toTopOf="@+id/textView32" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_add_money_page"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_add_money_exit"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="743dp"
+                android:layout_marginEnd="49dp"
+                android:background="@drawable/selector_btn_gray_circle"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_money_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_add_money_confirm"
+                android:layout_width="100dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="743dp"
+                android:background="@drawable/selector_btn_alert_confirm"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btn_add_money_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/btn_add_money_back"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="743dp"
+                android:background="@drawable/selector_btn_orange_circle"
+                android:text="@string/return_previous_page"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_add_money_success"
+                android:layout_width="273dp"
+                android:layout_height="236dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="238dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/warning" />
+
+            <TextView
+                android:id="@+id/tv_add_money_check_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="340dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="104dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/add_money_check_title" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="290dp"
+                android:gravity="right"
+                android:text="100元 *"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_hundred"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView34"
+                app:layout_constraintStart_toEndOf="@+id/textView34"
+                app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="張(吐鈔匣)"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_hundred"
+                app:layout_constraintTop_toTopOf="@+id/tv_hundred" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="50元 *"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+            <TextView
+                android:id="@+id/tv_fifty"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_fifty"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="10元 *"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/tv_ten"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView37"
+                app:layout_constraintStart_toEndOf="@+id/textView37"
+                app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_ten"
+                app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="5元 *"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/tv_five"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView38"
+                app:layout_constraintStart_toEndOf="@+id/textView38"
+                app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_five"
+                app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="382dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="1元 *"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="95dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView39"
+                app:layout_constraintStart_toEndOf="@+id/textView39"
+                app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_one"
+                app:layout_constraintTop_toTopOf="@+id/textView39" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

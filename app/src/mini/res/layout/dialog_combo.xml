@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popupBg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlLeft"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_dialog_black">
+
+                <ImageView
+                    android:id="@+id/ivLeftTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/title_confirm_detail" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rlLeftBottom"
+                    android:layout_below="@id/ivLeftTitle"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:id="@+id/iv_comb"
+                        android:layout_width="246dp"
+                        android:layout_height="166dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/product_placeholder" />
+
+                    <TextView
+                        android:id="@+id/tv_prodname"
+                        style="@style/ItemNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_comb"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start"
+                        android:lines="1"
+                        android:maxWidth="300dp"
+                        android:text="@string/singleProdName"
+                        android:textColor="@color/rawWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_unitPrice"
+                        style="@style/PriceText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_prodname"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/tv_prodname"
+                        android:gravity="end"
+                        android:textColor="@color/rawWhite"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="350dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_unitPrice"
+                        android:layout_margin="10dp"
+                        android:background="@color/rawWhite" />
+
+                    <ScrollView
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_prodname"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_prodContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/rawWhite"
+                            android:textSize="20sp" />
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/rlLeftBottom"
+                    android:layout_margin="10dp"
+                    android:background="@color/rawWhite" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLeftBottom"
+                    android:layout_width="350dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:id="@+id/tvQtyTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/quantity"
+                        android:textColor="@color/rawWhite"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llNumberBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvQtyTitle"
+                        android:layout_margin="6dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_1"
+                            style="@style/btn_combItem_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="1"
+                            android:text="1" />
+
+                        <Button
+                            android:id="@+id/btn_2"
+                            style="@style/btn_combItem_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="2"
+                            android:text="2" />
+
+                        <Button
+                            android:id="@+id/btn_3"
+                            style="@style/btn_combItem_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="3"
+                            android:text="3" />
+
+                        <Button
+                            android:id="@+id/btn_4"
+                            style="@style/btn_combItem_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="4"
+                            android:text="4" />
+
+                        <Button
+                            android:id="@+id/btn_5"
+                            style="@style/btn_combItem_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="5"
+                            android:text="5" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_keyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/llNumberBtn"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_clear">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_keyboard">
+
+                            <TextView
+                                android:id="@+id/tv_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="#000"
+                                android:textSize="32sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/rlLeft">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#000"
+                    android:gravity="center"
+                    android:text="選擇喜好-單點"
+                    android:textColor="#FFF"
+                    android:textSize="48sp" />
+
+                <ScrollView
+                    android:id="@+id/scv_combItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_margin="8dp"
+                    android:background="#FFF">
+
+                    <LinearLayout
+                        android:id="@+id/ll_combItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/row_combitem" />
+
+                        <include layout="@layout/row_combitem" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/scv_combItem">
+
+                    <TextView
+                        android:id="@+id/tv_total_"
+                        android:layout_width="128dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/price"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        style="@style/BigMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/tv_total_"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toStartOf="@id/btn_ok"
+                        android:background="@drawable/selector_btn_back_small" />
+
+
+                    <Button
+                        android:id="@+id/btn_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="36dp"
+                        android:background="@drawable/selector_btn_ok" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/pgd_combItemList"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

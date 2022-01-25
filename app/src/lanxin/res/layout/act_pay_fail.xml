@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.ScanActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent="1" />
+
+    <!-- AppBar layout for using Toolbar as AppBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ToolBar widget -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title=""
+                app:titleTextColor="#ffff" />
+
+            <!-- Right most ImageView -->
+            <ImageButton
+                android:id="@+id/imageBtn_restart"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="fitCenter"
+                android:background="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/back_arrow"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="1080dp"
+                android:layout_height="64dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_ad"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:layout_below="@+id/rl_top"
+                android:background="#EEF"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivAd"
+                    android:layout_width="1080dp"
+                    android:layout_height="380dp"
+                    android:src="@drawable/page_ad"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tv_black"
+                android:layout_below="@+id/rl_ad"
+                android:background="#FFF">
+
+                <RelativeLayout
+                    android:id="@+id/rl_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="#EEEEEE">
+
+                    <ImageView
+                        android:id="@+id/iv_centerLeft"
+                        android:layout_width="315dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="82dp"
+                        android:layout_marginTop="53dp"
+                        android:layout_marginEnd="82dp"
+                        android:src="@drawable/pay_fail" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/iv_centerLeft"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="80dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/ezCardPayErrorTitle"
+                            android:textColor="@color/red"
+                            android:textSize="37sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_title2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:text="@string/pleaseReturn"
+                            android:textColor="#646464"
+                            android:textSize="26sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_center"
+                    android:layout_alignStart="@+id/rl_center"
+                    android:layout_alignEnd="@+id/rl_center"
+                    android:layout_marginTop="256dp">
+
+                    <TextView
+                        android:id="@+id/tv_fail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/oops"
+                        android:textColor="#000"
+                        android:textSize="64sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rl_bottom"
+                android:background="#000"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="#FFF"
+                android:textSize="36sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:background="#EEEEEE"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/btn_back_home"
+                    style="@style/btn_main_theme"
+                    android:layout_width="168dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_back_home"
+                    android:clickable="true"/>
+
+                <Button
+                    android:id="@+id/btn_back_last"
+                    android:layout_width="168dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:background="@drawable/btn_back_last" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

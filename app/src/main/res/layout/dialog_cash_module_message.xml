@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/dialog_01"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_main_theme"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="384dp"
+            android:layout_marginTop="508dp"
+            android:background="@drawable/selector_btn_orange_circle"
+            android:text="@string/returnHomeButton"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/btn_main_theme"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="512dp"
+            android:layout_marginTop="508dp"
+            android:background="@drawable/selector_btn_alert_confirm"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:text="請取回退款\n重新操作點餐。"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView21"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message_title" />
+
+        <TextView
+            android:id="@+id/tv_message_title"
+            android:layout_width="394dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="229dp"
+            android:text="您的付款操作已逾時!"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_message"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="237dp"
+            android:layout_height="237dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_message_title"
+            app:srcCompat="@drawable/warning" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

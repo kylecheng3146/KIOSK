@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".7" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="964dp"
+        android:layout_height="540dp"
+        android:background="@color/kinyo_background"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1"
+        app:layout_constraintVertical_bias="0.501">
+
+        <Button
+            android:id="@+id/btn_backHome"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="252dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/button_back_home_pressed"
+            android:gravity="bottom|center"
+            android:paddingBottom="12dp"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="252dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/button_continue_pressed"
+            android:gravity="bottom|center"
+            android:paddingBottom="12dp"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_idle"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="376dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="您要繼續點餐嗎？"
+            android:textColor="@color/kinyo_product_cate_bg"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title1" />
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="376dp"
+            android:layout_marginTop="57dp"
+            android:text="您已閒置一分鐘囉！"
+            android:textColor="@color/kinyo_product_cate_bg"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

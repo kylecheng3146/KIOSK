@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.HomeActivity">
+
+    <View
+        android:id="@+id/vCenter"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/vRight"
+        app:layout_constraintStart_toEndOf="@+id/vLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vRight"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vCenter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vLeft"
+        android:layout_width="0dp"
+        android:layout_height="203dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/vCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="1024dp"
+        android:layout_height="66dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="1024dp"
+        android:layout_height="532dp"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ad" />
+
+        <RelativeLayout
+            android:id="@+id/rl_previous"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_clear">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6CCC"
+                android:padding="16dp"
+                android:src="@mipmap/ad_previous_2"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_clear">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6CCC"
+                android:padding="16dp"
+                android:src="@mipmap/ad_next_2"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/V_75"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/H_05"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+    <pl.droidsonroids.gif.GifImageButton
+        android:id="@+id/gifBtnGoNext"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ad_ordernow"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="1080dp"
+        android:layout_height="330dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="1080dp"
+            android:layout_height="330dp"
+            android:src="@mipmap/ad_bottom_bg" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

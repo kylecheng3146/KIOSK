@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:src="@drawable/page_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAd"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:src="@drawable/page_ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_receipt_module"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAd">
+
+        <Button
+            android:id="@+id/btn_memberCarrier"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="64dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/memberCarrier"
+            android:textSize="48sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_vehicle"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_vehicle"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/vehicle"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_donate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_memberCarrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_donate"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/donate_code"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_taxId"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_vehicle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_taxId"
+            style="@style/Btn_Dialog_01"
+            android:layout_width="@dimen/receipt_component_size"
+            android:layout_height="@dimen/receipt_component_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            android:text="@string/tax_no"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_donate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_memberCarrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_memberCarrier"
+            android:layout_alignStart="@id/btn_memberCarrier"
+            android:layout_alignEnd="@id/btn_memberCarrier"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_edittext"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="@string/scanVehicle"
+            android:padding="8dp"
+            android:textColor="#555"
+            android:textColorHint="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@id/btn_memberCarrier"
+            app:layout_constraintStart_toStartOf="@id/btn_memberCarrier"
+            app:layout_constraintTop_toBottomOf="@id/btn_memberCarrier" />
+
+        <EditText
+            android:id="@+id/et_donate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_donate"
+            android:layout_alignStart="@+id/btn_donate"
+            android:layout_alignEnd="@+id/btn_donate"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_edittext"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="@string/scanDonateNo"
+            android:padding="8dp"
+            android:textColor="#555"
+            android:textColorHint="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_donate"
+            app:layout_constraintStart_toStartOf="@+id/btn_donate"
+            app:layout_constraintTop_toBottomOf="@+id/btn_donate" />
+
+        <EditText
+            android:id="@+id/et_vehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_vehicle"
+            android:layout_alignStart="@+id/btn_vehicle"
+            android:layout_alignEnd="@+id/btn_vehicle"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_edittext"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="@string/scanVehicle"
+            android:padding="8dp"
+            android:textColor="#555"
+            android:textColorHint="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_vehicle"
+            app:layout_constraintStart_toStartOf="@+id/btn_vehicle"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vehicle" />
+
+        <EditText
+            android:id="@+id/et_taxId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_taxId"
+            android:layout_alignStart="@+id/btn_taxId"
+            android:layout_alignEnd="@+id/btn_taxId"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_edittext"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="@string/insert"
+            android:padding="8dp"
+            android:textColor="#555"
+            android:textColorHint="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_taxId"
+            app:layout_constraintStart_toStartOf="@+id/btn_taxId"
+            app:layout_constraintTop_toBottomOf="@+id/btn_taxId" />
+
+        <ImageButton
+            android:id="@+id/ib_vehicle_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/et_vehicle"
+            app:layout_constraintEnd_toEndOf="@+id/btn_vehicle"
+            app:layout_constraintTop_toTopOf="@+id/et_vehicle"
+            app:srcCompat="@drawable/icon_close" />
+
+        <ImageButton
+            android:id="@+id/ib_donate_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/et_donate"
+            app:layout_constraintEnd_toEndOf="@+id/btn_donate"
+            app:layout_constraintTop_toTopOf="@+id/et_donate"
+            app:srcCompat="@drawable/icon_close" />
+
+        <ImageButton
+            android:id="@+id/ib_taxId_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/et_taxId"
+            app:layout_constraintEnd_toEndOf="@+id/btn_taxId"
+            app:layout_constraintTop_toTopOf="@+id/et_taxId"
+            app:srcCompat="@drawable/icon_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/rl_receipt_module">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pickup_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_pickup_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:text="@string/pickupMethod"
+                    android:textColor="#000"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pickup_methods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pickup_method"
+                    app:spanCount="4"
+                    tools:listitem="@layout/item_payments" />
+
+                <TextView
+                    android:id="@+id/tv_pickup_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/ironOxideRed"
+                    android:textSize="48sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_pickup_methods" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_pay_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:text="@string/selectPayMethod"
+                    android:textColor="#000"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_paymemts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pay_method"
+                    app:spanCount="4"
+                    tools:listitem="@layout/item_payments">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_btn_orange_circle"
+            android:text="@string/return_previous_page"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <Button
+            android:id="@+id/btn_earn_points"
+            style="@style/btn_main_theme"
+            android:text="我要集點"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/inorout_bottom"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="64dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Btn_Card"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/checkout_easycard_select"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Btn_QRCode"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:text="@string/linePay"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnNccc"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_card_pay"
+                android:textSize="48sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/Btn_Cash"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/checkout_cash_select"
+                android:textSize="48sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnAddOne"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="255dp"
+                android:layout_height="252dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:textSize="45sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnPiPay"
+                style="@style/Btn_Dialog_01"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/selector_btn_no_text"
+                android:text="@string/piPay"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_easy_wallet"
+        style="@style/Btn_Dialog_01"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/selector_btn_no_text"
+        android:text="悠遊付"
+        android:textSize="48sp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

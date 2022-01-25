@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/dialog_01"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/btn_main_theme"
+            android:layout_width="282dp"
+            android:layout_height="96dp"
+            android:text="@string/confirm"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="210dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView0" />
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="150dp"
+            android:text="請取回退款\n重新操作點餐。"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="394dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="229dp"
+            android:layout_marginEnd="65dp"
+            android:text="您的付款操作已逾時!"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="237dp"
+            android:layout_height="237dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="@+id/textView20"
+            app:srcCompat="@drawable/cate_sample" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

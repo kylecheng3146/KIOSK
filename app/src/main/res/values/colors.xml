@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="lightGray">#f5f5f5</color>
+    <color name="orange">#fc6900</color>
+    <color name="dialogWindowBackground">#C000</color>
+    <color name="themeColor">#CC202020</color>
+    <color name="red">#FF0000</color>
+
+    <!--主色 primary-->
+    <color name="darkOrange">#F87D28</color>
+    <color name="orangeRed">#E74D08</color>
+    <color name="saddleBrown">#BF4D00</color>
+
+    <!--重點色 accent-->
+    <color name="vermilion">#B4012A</color>
+    <color name="ironOxideRed">#7E152E</color>
+
+    <!--輔色 secondary 灰色-->
+    <color name="paleGray">#E8E8E8</color>
+    <color name="mediumGray">#BDBDBD</color>
+    <color name="leadenGray">#54565B</color>
+    <color name="dustGray">#757575</color>
+
+    <!--輔色 黑色-->
+    <color name="coalBlack">#262626</color>
+    <color name="dullBlack">#020202</color>
+    <color name="pitchBlack">#000000</color>
+
+    <color name="rawWhite">#FFFFFF</color>
+
+    <!--透明底色-->
+    <color name="transparency80Black">#CC000000</color>
+    <color name="transparency50Bg">#80E8E8E8</color>
+    <color name="transparency30Bg">#4DE8E8E8</color>
+    <color name="popupBg">#CC000000</color>
+
+</resources>

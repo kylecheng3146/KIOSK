@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C000">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L1"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/L2"
+        style="@style/CL_H"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T1"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/T2"
+        style="@style/CL_V"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_01"
+        app:layout_constraintBottom_toBottomOf="@+id/T2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/L1"
+        app:layout_constraintRight_toRightOf="@+id/L2"
+        app:layout_constraintTop_toTopOf="@+id/T1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="118dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:background="#000"
+                android:gravity="center"
+                android:text="@string/chooseTicket"
+                android:textColor="#FFF"
+                android:textSize="48sp" />
+
+            <ScrollView
+                android:id="@+id/scv_taste"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rl_bottom"
+                android:layout_below="@+id/tv_title"
+                android:layout_margin="8dp"
+                android:background="#FFF">
+
+                <GridLayout
+                    android:id="@+id/gl_ticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:columnCount="2">
+
+                    <include layout="@layout/v_ticket_select"/>
+
+                    <include layout="@layout/v_ticket_select"/>
+
+                    <include layout="@layout/v_ticket_select"/>
+
+                </GridLayout>
+
+            </ScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="206dp"
+                    android:layout_height="206dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/ticket_use_select"
+                    android:padding="16dp"
+                    android:textSize="64sp" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignBottom="@+id/btn_ok"
+                    android:layout_marginEnd="32dp"
+                    android:layout_toStartOf="@+id/btn_ok"
+                    android:background="@drawable/combitem_select_back" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/pgb"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

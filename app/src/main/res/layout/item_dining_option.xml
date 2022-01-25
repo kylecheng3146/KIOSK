@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_normal_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_dining_2"
+            android:layout_width="256dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_btn_selector"
+            android:text="@string/dineIn"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_dining"
+            app:layout_constraintStart_toStartOf="@+id/btn_dining"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dining" />
+
+        <Button
+            android:id="@+id/btn_dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_large_orange_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_dining"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_dining"
+            app:layout_constraintEnd_toEndOf="@+id/btn_dining"
+            app:layout_constraintStart_toStartOf="@+id/btn_dining"
+            app:layout_constraintTop_toTopOf="@+id/btn_dining"
+            app:srcCompat="@drawable/meal_dine_in" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_gif_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="80dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageButton
+            android:id="@+id/gif_btn_dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

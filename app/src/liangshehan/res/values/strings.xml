@@ -1,0 +1,292 @@
+<resources>
+    <string name="app_name">Kiosk</string>
+
+    <string-array name="AR_Size">
+        <item>尺寸大</item>
+        <item>尺寸中</item>
+        <item>尺寸小</item>
+    </string-array>
+    <string-array name="AR_Sugar">
+        <item>正常糖</item>
+        <item>半糖</item>
+        <item>少糖</item>
+        <item>微糖</item>
+        <item>無糖</item>
+    </string-array>
+    <string-array name="AR_Ice">
+        <item>正常冰</item>
+        <item>少冰</item>
+        <item>微冰</item>
+        <item>去冰</item>
+    </string-array>
+
+    <!--資料庫 PayId-->
+    <string name="ticketPayId">Q004</string>
+    <string name="LinePayId">Q006</string>
+    <string name="ezCardPayId">K</string>
+    <string name="coupon">折價券</string>
+
+    <string name="currencySymbol">TWD</string>
+    <string name="currencyUnit">NT</string>
+    <string name="pricePrefix">NT.</string>
+
+    <!--錯誤處理-->
+    <string name="errorOccur">發生錯誤</string>
+    <string name="connectionError">網路連線失敗</string>
+    <string name="noNetwork">無網路連線</string>
+    <string name="checkNetwork">請檢查網路連線</string>
+    <string name="pleaseWait">請稍候</string>
+    <string name="oops">哎呀 失敗！</string>
+    <string name="continueOrder">請問要繼續點餐嗎？</string>
+    <string name="idledTimeMsg">你已經閒置一分鐘囉!</string>
+    <string name="getPriceLimitError">取得單筆金額限制失敗</string>
+    <string name="overPriceLimit">超過訂單金額限制</string>
+    <string name="needUpdate">需要版本更新\n請稍候</string>
+    <string name="noProductInCate">本類別此時段無商品</string>
+    <string name="paidErrorCode">(Code:%d)</string>
+    <string name="paidError">付款完成，但建立訂單出錯。\n請通知店員協助處理\n訂單編號:</string>
+
+    <string name="backToHpTitle">確定返回首頁？</string>
+    <string name="backToHpMsg">已點餐點將被清空！</string>
+    <string name="removeCouponFirst">請先移除兌換券</string>
+    <string name="noProductNoCoupon">沒有商品，無法使用折價券</string>
+
+    <string name="stopSell">已售完</string>
+    <string name="selectedOrders">已點菜單</string>
+    <string name="totalAmount">合計</string>
+    <string name="orderBuilding">訂單建構中....</string>
+    <string name="redeemPoints">點數折抵</string>
+    <string name="orderSending">送單中....</string>
+
+    <string name="mealDetail">確認點餐細節</string>
+    <string name="combName">套餐名稱</string>
+    <string name="itemName">項目名稱</string>
+    <string name="tasteName">口味名稱</string>
+    <string name="changeItem">換品項</string>
+    <string name="singleProdName">單品餐名</string>
+    <string name="unFinishComb">尚有品項未選擇</string>
+    <string name="noRefundInform">請確認餐點，\n付款後恕不退款</string>
+    <string name="totalIsZero">很抱歉金額計算錯誤，請重新點餐</string>
+
+    <string name="selectSaleMethod">選擇用餐方式</string>
+    <string name="chooseMeal">選擇您的餐點</string>
+    <string name="selectPayMethod">選擇結帳方式</string>
+    <string name="chooseTicket">選擇使用優惠卷</string>
+    <string name="dineIn">內用</string>
+    <string name="takeAway">外帶</string>
+    <string name="product">商品</string>
+    <string name="quantity">數量</string>
+    <string name="price">金額</string>
+    <string name="originPrice">原價</string>
+    <string name="subtoal">小計</string>
+    <string name="subtotalWithColon">小計:</string>
+    <string name="unitPrice">單價:</string>
+    <string name="counterPay">櫃檯結帳</string>
+    <string name="counterButton">櫃台\n結帳</string>
+    <string name="linePay">LINE Pay</string>
+    <string name="easyCard">悠遊卡</string>
+    <string name="piPay">Pi 拍錢包</string>
+
+    <string name="change">更 換</string>
+    <string name="buy">選 購</string>
+    <string name="select">選擇</string>
+    <string name="exchangePrefix">(兌換)</string>
+    <string name="discountPrefix">(折價)</string>
+
+    <string name="discountTitle">折扣</string>
+    <string name="ticketDiscount">票券折價</string>
+
+    <string name="chooseFavor">選擇喜好</string>
+    <string name="noTasteOption">找不到口味選項</string>
+    <string name="productNotFound">找不到商品</string>
+    <string name="noProductInThisCate">此類別沒有商品</string>
+
+    <string name="memberLogin">會員登入</string>
+    <string name="loginPlease">會員請先登入</string>
+    <string name="loginFail">會員登入失敗</string>
+    <string name="loginMsg">請將App會員QRCode靠近掃描器</string>
+    <string name="scanError">哎呀 掃描錯誤</string>
+    <string name="scanFail">哎呀 掃描失敗！</string>
+    <string name="pasteCode">貼上條碼</string>
+    <string name="welcome">歡迎您</string>
+    <string name="loggedIn">已登入</string>
+
+    <!--掃描頁-->
+    <string name="insert">請輸入</string>
+    <string name="scanDonateNo">請掃描捐贈碼</string>
+    <string name="scanDonateNoMsg">請打開捐贈碼，\n將QRCode靠近掃描器</string>
+    <string name="scanVehicle">請掃描手機載具</string>
+    <string name="scanVehicleMsg">請打開手機載具，\n將QRCode靠近掃描器</string>
+    <string name="scanEasyCard">感應您的悠遊卡</string>
+    <string name="scanEasyCardMsg">請將您的悠遊卡\n靠近讀卡機</string>
+    <string name="scanLinePay">掃描你的LINE Pay</string>
+    <string name="scanLinePayMsg">請打開LINE Pay，\n將QRCode靠近掃描器</string>
+    <string name="scanPiPay">掃描你的Pi拍錢包</string>
+    <string name="scanPiPayMsg">請打開Pi拍錢包，\n將QRCode靠近掃描器</string>
+
+    <string name="invalidTaxNo">錯誤的統一編號</string>
+    <string name="taxNoNeed8Digit">統編需為8碼</string>
+    <string name="invalidVehicleNo">無效的載具條碼</string>
+    <string name="invalidDonateNo">無效的捐贈碼</string>
+    <string name="scanPayError">已扣款但是送單發生異常，請聯絡技術人員</string>
+
+
+    <!--桌號-->
+    <string name="scanTableNoCode">請掃描桌號二維碼</string>
+    <string name="scanTableNoMsg">將二維碼靠近右下角掃描器</string>
+    <string name="tableNoError">桌號錯誤，請重新輸入</string>
+    <string name="tableNoCodeError">非本店條碼，請重新掃描</string>
+    <string name="reScanMsg">請重新掃描</string>
+
+    <!--信用卡-->
+    <string name="creditCard">信用卡</string>
+    <string name="ncccPay">信用卡付款</string>
+    <string name="seeCardMachineMsg">請依信用卡機指示使用信用卡</string>
+    <string name="openEcrErrorMsg">信用卡機連接失敗，\n請檢查硬體或設定</string>
+    <string name="checkCardDevice">信用卡機檢查中\n請稍候</string>
+    <string name="cardDeviceNoResError">很抱歉，信用卡機完全無回應\n請向店員確認是否已付款\n</string>
+    <string name="cardPayTimeout">卡機逾時</string>
+
+    <!--悠遊卡黑名單-->
+    <string name="ecBlackListFilePath">/ICERData/BlcFile/</string>
+    <string name="ecBlackListZipFileName">blcFile.zip</string>
+    <string name="ecBlackListFileName">BLC03331A_161221.BIG</string>
+
+    <string name="ezCardCheckout">悠遊卡結帳</string>
+    <string name="checkSuccess">結帳完成</string>
+    <string name="emptyTransactData">無交易紀錄</string>
+    <string name="ecReCheckout">悠遊卡補結帳</string>
+    <string name="noEzCardPara">請先設定悠遊卡參數檔(ICERINI.xml)</string>
+    <string name="startDongle">已備妥悠遊卡</string>
+    <string name="ezCardDongleError">請暫停使用悠遊卡交易，並請進行報修換機流程</string>
+    <string name="ezCardRetryMsg">交易逾時，請確認相同卡片正確置放，重新進行感應</string>
+    <string name="ezCardPayErrorTitle">交易失敗</string>
+    <string name="ezCardRetryToLimit">已超過重試次數，\n請返回選擇其他付款方式</string>
+
+    <string name="billOk">送單完成</string>
+    <string name="takeBill">請從下方取出付款單至櫃檯結帳</string>
+    <string name="takeReceipt">請從下方取出單據</string>
+    <string name="paid">結帳完成</string>
+    <string name="takeReceipts">請從下方取出明細 發票 取號單</string>
+    <string name="returnHome">請點選返回，結束交易</string>
+    <string name="getBannerFail">取得Banner失敗</string>
+
+    <!--印單內容-->
+    <string name="testGuiNo">24436074</string>
+    <string name="testReceipt">此為測試發票</string>
+    <string name="bill">付款單</string>
+    <string name="eInvPrintTitle">電子發票證明聯</string>
+    <string name="plsPayAtCounter">請至櫃檯結帳，謝謝您</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="format25">  格式25</string>
+    <string name="randomNo">隨機碼 </string>
+    <string name="total">總計  </string>
+    <string name="seller">賣方</string>
+    <string name="buyer">買方</string>
+    <string name="shopId">店號</string>
+    <string name="machine">  機 </string>
+    <string name="serial"> 序</string>
+    <string name="eInvBottomMsg">**退貨時請攜帶電子發票證明聯</string>
+    <string name="creditCardReceiptBottom">**退款時請出示本單據</string>
+    <string name="invDetail">交易明細</string>
+    <string name="taxAmount">應稅銷售額</string>
+    <string name="taxFreeAmt">免稅銷售額</string>
+    <string name="tax">稅      額</string>
+    <string name="totalWithSpace">總      計</string>
+    <string name="receipt">收據</string>
+    <string name="takeMealNo">取餐號碼:</string>
+    <string name="discount">折讓</string>
+    <string name="tailDiscount">尾數折讓</string>
+    <string name="receive">實收:</string>
+    <string name="pay">支付:</string>
+    <string name="invNo">發票號碼:</string>
+    <string name="donateNo">捐贈碼:</string>
+    <string name="invVehicle">載具:</string>
+    <string name="receiptBottomMsg">此單據內容僅供參考不作為交易憑證</string>
+
+    <!--出單機處理-->
+    <string name="noConnectedPrinter">沒有連線的印表機</string>
+    <string name="printerNoConnection">出單機未連線</string>
+    <string name="tryLater">請稍候重試</string>
+    <string name="printerPaperEnd">請通知店員補充出單紙</string>
+    <string name="printerCoverOpen">出單機蓋子狀態為開啟，請排除後重試</string>
+    <string name="printerNotOk">出單機異常，請通知服務人員排除後再重試</string>
+    <string name="printerNotOkReason">出單機異常(%s)，請通知服務人員排除後再重試</string>
+    <string name="printerPaperPresentAlert">請先取走出單機口的單據後，再重試一次</string>
+    <string name="printerError">很抱歉，因技術問題導致印單失敗，請通知店員處理\n</string>
+    <string name="printFail">很抱歉，出單失敗</string>
+    <string name="errorStatus">(錯誤狀態:%s)\n</string>
+    <string name="orderIdIs">(訂單編號:%s)</string>
+    <string name="noValidPrinter">無可用出單機</string>
+    <string name="rePrintReceipt">補印\n收據</string>
+    <string name="returnHomeButton">返回\n首頁</string>
+    <string name="informed">已通知</string>
+    <string name="noInvoiceErrMsg">無發票檔，請店員處理\n訂單編號 : </string>
+    <string name="printerErrMoreMsg">\n若是發票收據皆未印出，請按補印收據\n持收據向店員補印發票\n\n已印出請忽略</string>
+    <string name="confirm">確認</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="retry">重試</string>
+
+    <!--參展用小遊戲-->
+    <string name="gameUrl">http://inchsky.com/webtemp/wheel/wheel1.html</string>
+
+    <string name="start">開始</string>
+    <string name="end">結束</string>
+    <string name="finish">完成</string>
+    <string name="skip">略過</string>
+    <string name="getApiToken">取得伺服器金鑰</string>
+    <string name="setShopConfig">設定門市資訊</string>
+    <string name="setSaleMethod">設定銷售方式</string>
+    <string name="setBanner">Banner設定</string>
+    <string name="setKioskImage">設定KIOSK圖片</string>
+    <string name="checkKioskVersion">檢查KIOSK版本</string>
+    <string name="setBlackList">設定悠遊卡黑名單</string>
+    <string name="setEasyCard">設定悠遊卡機</string>
+    <string name="checkoutUnCheckoutEasyCard">檢查悠遊卡未結帳資料</string>
+    <string name="waitNcccReady">等待信用卡機開機完成</string>
+    <string name="checkCreditCardEdcReady">請確認信用卡機就緒後\n點擊按鈕作結帳</string>
+    <string name="ncccCheckout">信用卡機結帳</string>
+    <string name="initPrinter">初始化出單機</string>
+
+    <string name="needCheckoutBatch">共有%d筆帳未結\n</string>
+    <string name="proceedEasyCardCheckout">進行悠遊卡結帳，批號:%s\n</string>
+    <string name="easyCardCheckoutSuccess">悠遊卡結帳完成，批號:%s\n</string>
+    <string name="loopCheckoutMsg">悠遊卡補結帳失敗\n重試或是略過下次再結</string>
+    <string name="skipCheckoutMsg">悠遊卡結帳失敗\n重試或是略過\n略過結帳將無法使用悠遊卡功能</string>
+
+    <string name="getApiTokenFailed">取得伺服器金鑰失敗</string>
+    <string name="setSaleMethodFailed">銷售方式設定失敗</string>
+    <string name="setShopConfigFailed">門市資訊設定失敗，</string>
+    <string name="setBannerFailed">Banner設定失敗，</string>
+    <string name="setKioskImgFailed">KIOSK圖片設定失敗，</string>
+    <string name="checkKioskVersionFailed">KIOSK版本檢查失敗，</string>
+    <string name="setBlackListFailed">悠遊卡黑名單設定失敗，</string>
+    <string name="setEasyCardFailed">悠遊卡機設定失敗，</string>
+    <string name="loopCheckoutFailed">悠遊卡補結帳失敗</string>
+    <string name="setNcccFailed">信用卡機設定失敗，</string>
+    <string name="ncccCheckoutFailed">信用卡機結帳失敗\n</string>
+    <string name="checkAndRetry">\n請檢查網路連線或設定後，按下確認重試</string>
+    <string name="orderFailMsg">建立訂單失敗：伺服器無回應</string>
+    <string name="qrCodeHandleMsg">請檢查網路連線。請拍下QRCode交由客服處理</string>
+
+    <string name="checkingGetShopConfigTime">取得分店資訊中，剩餘 %d 秒</string>
+    <string name="checkingEasyCardTime">正在檢查悠遊卡，剩餘 %d 秒</string>
+    <string name="checkingNcccTime">正在檢查信用卡機，剩餘 %d 秒</string>
+    <string name="waitingNcccCheckOutTime">等待信用卡結帳完成，剩餘 %d 秒</string>
+    <string name="waitingIntoSettingTime">正在等待進入設定頁面，剩餘 %d 秒</string>
+    <string name="ncccTransactionTime">交易進行中，請稍候（剩餘 %d 秒）</string>
+    <string name="ncccErrorMessage">信用卡機發生錯誤\n按重試檢查是否付款成功\n按返回放棄此筆交易</string>
+    <string name="NCCCTimeoutFirst">等待信用卡機回應，請稍候（剩餘 %d 秒）</string>
+    <string name="NCCCTimeoutSecond">信用卡機無回應，重新連線中，請稍候（剩餘 %d 秒）</string>
+    <string name="NCCCTimeoutThird">重新等待信用卡機回應，請稍候（剩餘 %d 秒）</string>
+    <string name="clickLoadingToRetry">請點擊loading重新下載檔案</string>
+
+    <string name="backButtonFeedback">請勿點擊返回鍵</string>
+    <string name="add_more">加購\n餐點</string>
+    <string name="use_coupon">使用\n優惠券</string>
+    <string name="reordering">重新\n點餐</string>
+    <string name="continue_ordering">繼續\n點餐</string>
+
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.ScanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="1080dp"
+            android:layout_height="66dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_black"
+            android:layout_below="@+id/rl_ad"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="32sp" />
+
+            <ImageView
+                android:id="@+id/ivInfo"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/credit_text" />
+
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="930dp"
+                android:layout_height="427dp"
+                android:layout_below="@id/ivInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/givCreditCard"
+                    android:layout_width="480dp"
+                    android:layout_height="480dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/gif_credit_card" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_toEndOf="@+id/givCreditCard"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:text="@string/ncccPay"
+                        android:textColor="#000"
+                        android:textSize="64sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/seeCardMachineMsg"
+                        android:textColor="#000"
+                        android:textSize="42sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFF"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="350dp"
+                android:background="@drawable/inorout_bottom"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="426dp"
+                android:layout_height="145dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_select_back" />
+
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pgb"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

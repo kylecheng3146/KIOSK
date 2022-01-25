@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lafresh.kiosk.activity.ShopActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            style="@style/PageTop">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="66dp"
+                android:src="@drawable/page_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="1080dp"
+            android:layout_height="380dp"
+            android:layout_below="@+id/rl_top"
+            android:background="#EEF">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="1080dp"
+                android:layout_height="380dp"
+                android:src="@drawable/page_ad" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_ProdCate"
+            android:layout_width="1080dp"
+            android:layout_height="1474dp"
+            android:layout_below="@+id/rl_ad">
+
+            <ImageView
+                android:layout_width="1080dp"
+                android:layout_height="1474dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/cate_orderbg" />
+
+            <TextView
+                android:id="@+id/tv_prodtitle"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/chooseMeal"
+                android:textSize="48sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rl_bottom"
+                android:layout_below="@+id/tv_prodtitle">
+
+                <GridLayout
+                    android:id="@+id/gl_prodcate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:columnCount="3">
+
+                    <include layout="@layout/v_prodcate" />
+
+                    <include layout="@layout/v_prodcate" />
+
+                    <include layout="@layout/v_prodcate" />
+
+                    <include layout="@layout/v_prodcate" />
+
+
+                </GridLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                style="@style/PageBottom"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:layout_width="1080dp"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="425dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_btn_back" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/pgb_prodcate"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

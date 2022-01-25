@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/paleGray"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_select"
+            style="@style/BigTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="@string/selectSaleMethod"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            style="@style/BlackBgTitle"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/loginPlease"
+            android:textColor="@color/dustGray"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/Btn_In"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_margin="40dp"
+                android:background="@drawable/selector_btn_dine_in" />
+
+            <Button
+                android:id="@+id/Btn_Out"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_margin="40dp"
+                android:background="@drawable/selector_btn_take_away" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/right_menu" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55dp"
+            android:background="@drawable/selector_btn_login" />
+    </RelativeLayout>
+
+</LinearLayout>

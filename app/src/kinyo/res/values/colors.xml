@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="lightGray">#f5f5f5</color>
+    <color name="orange">#fc6900</color>
+    <color name="dialogWindowBackground">#C000</color>
+    <color name="kinyo_background">#EFEFEF</color>
+    <color name="kinyo_takeout_page_title">#707070</color>
+    <color name="kinyo_product_cate_bg">#707070</color>
+    <color name="kinyo_product_cate_dark_bg">#BABABA</color>
+    <color name="kinyo_product_cate_text_color">#A8A8A8</color>
+
+</resources>
